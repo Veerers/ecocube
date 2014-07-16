@@ -145,7 +145,7 @@ gulp.task('prod', ['prod:jade', 'prod:durandal', 'prod:resources', 'prod:css', '
 // TOOLS
 
 gulp.task('clean', function () {
-    return gulp.src(['public', 'src/libs', 'src/main.css', 'src/app/**/*.html'])
+    return gulp.src(['build', 'node_modules', 'public', 'src/index.html', 'src/app/**/*.html', 'src/libs', 'src/main.css'])
         .pipe(rimraf());
 });
 

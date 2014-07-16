@@ -14,8 +14,10 @@
     "gulp-preprocess": "^1.1.1",
     "gulp-rimraf": "^0.1.0",
     "gulp-stylus": "^1.0.5",
+    "gulp-util": "^2.2.20",
     "jslint": "^0.6.1",
     "lodash": "^2.4.1",
+    "merge-stream": "^0.1.5",
     "nib": "^1.0.3",
     "node-inspector": "^0.7.4"
   }

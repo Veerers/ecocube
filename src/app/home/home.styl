@@ -1,31 +1,299 @@
 .home
-    background-image url(/img/bg_wo_logo.jpg)
-    background-position top
-    min-height 1000px
+    header
+        background-image url(/img/bg_wo_logo.jpg)
+        background-position top
+        background-size 1000px
+        height 620px
+        @media xs
+            background-size 700px
+            position relative
+            height 440px
+        @media sm
+            background-size 1600px
+            height 1000px
 
     .logo-3e
         position absolute
-        top 50px
+        top 37px
         left 0
-        right 400px
+        right 260px
         margin auto
-        @media (max-width: 480px)
-            right 0
-            top 160px
-        @media (min-width: 768px)
-            right 500px
+        width 130px
+        @media xs
+            top 25px
+            right 150px
+            clip rect(0px, 70px, 100px, 0px)
+        @media sm
+            width 195px
+            top 61px
+            right 460px
+        @media md
+            right 540px
 
     .logo-eco
         position absolute
-        top 50px
-        left 196px * 0
+        top 30px
+        left 256px
         right 0
         margin auto
-        @media (min-width: 480px)
-            left 196px * 1
-        @media (min-width: 768px)
-            left 196px * 2
-        @media (min-width: 1000px)
-            left 196px * 3
-        @media (min-width: 1200px)
-            left 196px * 4
+        width 200px
+        @media xs
+            left 90px
+            top 20px
+        @media sm
+            width 296px
+            top 50px
+            left 393px
+        @media md
+            left 586px
+
+    .link-shape
+        item-color = #d3a907
+        border-width = 3px
+        border-prop = border-width solid white
+        line-deg = 45deg
+        line-length = 95px
+        line-width = 9px
+        circle-size = 18px
+        block-skew = 20deg
+
+        position absolute
+        margin auto
+        left 0
+        right 0
+        width 1px
+
+        &.link-shape-1
+            top 320px
+            left 337px
+            line-deg = -145deg
+            @media xs
+                top 210px
+                left 280px
+            @media sm
+                top 510px
+                left 630px
+            .circle
+                top -9px
+                left -10px
+            .line
+                width 110px
+                @media sm
+                    width 60px
+                transform rotate(-150deg)
+                top -15px
+                left -4px
+            .text-container
+                top -90px
+                right 110px
+                @media sm
+                    top -64px
+                    right 67px
+                transform skew(block-skew)
+            .text
+                transform skew(-(block-skew))
+
+        &.link-shape-2
+            top 437px
+            left 182px
+            line-length = 70px
+            block-skew = -20deg
+            @media xs
+                top 333px
+                left 210px
+            @media sm
+                top 639px
+                left 270px
+            .line
+                width 15px
+                transform rotate(58deg)
+                top -123px
+                left -26px
+                @media xs
+                    display none
+            .text-container
+                top -149px
+                right 30px
+                transform skew(-(block-skew))
+            .text
+                transform skew(block-skew)
+
+        &.link-shape-3
+            line-deg = 205deg
+            line-length = 50px
+            block-skew = -20deg
+            top 468px
+            left -360px
+            @media xs
+                top 450px
+                left -240px
+            @media sm
+                top 690px
+                left -660px
+            .circle
+                @media xs
+                    top -65px
+                    left 20px
+            .line
+                width 93px
+                transform rotate(-62deg)
+                top -12px
+                right -99px
+                @media xs
+                    width 30px
+                    top -67px
+                    right -65px
+            .text-container
+                text-align right
+                top -120px
+                left 30px
+                transform skew(-(block-skew))
+            .text
+                transform skew(block-skew)
+
+        .circle
+            top (- (circle-size) / 2)
+            left (- (circle-size) / 2)
+            width circle-size
+            height circle-size
+            background item-color
+            border-radius 50%
+            border border-prop
+            position absolute
+
+        .line
+            transform-origin 0 9px
+            background item-color
+            width line-length
+            height line-width
+            position absolute
+            top (-(line-width) / 2);
+            border-top border-prop;
+            border-bottom border-prop;
+            z-index 1
+
+        .text-container
+            background item-color
+            color white
+            padding 5px 10px
+            transform-origin: 0 0
+            font-size 18px
+
+            border-radius 3px
+            border border-prop
+            position absolute
+            transform skew(-(block-skew))
+
+        .text
+            transform skew(block-skew)
+            white-space nowrap
+    menu
+        list-style none
+        margin 0
+        padding 20px 0
+
+    .menu-container
+        margin auto
+        width 330px
+        padding-left 50px
+        @media xs
+            padding-left 70px
+            width 300px
+        @media sm
+            @media md-max
+                width 740px
+                padding-top 60px
+        @media md
+            width 970px
+            padding-left 70px
+
+        clearfix()
+        > li
+            @media sm
+                float left
+
+    .menu-submenu
+        padding-top 15px
+        width 330px
+        font-size 16px
+        color #8c6239
+        @media xs
+            width 230px
+        @media sm
+            @media md-max
+                width 230px
+                padding-left 40px
+        @media md
+            width 300px
+
+        > li
+            padding 6px 0 6px 30px
+            position relative
+            &:before
+                position absolute
+                left 0
+                content '—'
+
+    .menu-label
+        font-size 30px
+        color #d2ba53
+        font-weight bold
+        text-transform uppercase
+        position relative
+        @media sm
+            @media md-max
+                text-align center
+        &:before
+            content ''
+            position absolute
+            left -60px
+            top -5px
+            display block
+            width 48px
+            height 44px
+            background-image url(/img/icons.png)
+            @media sm
+                @media md-max
+                    top -50px
+                    left 0
+                    right 0
+                    margin auto
+
+        &-business
+            &:before
+                background-position -48px
+        &-news
+            &:before
+                background-position 48px
+    .footer-container
+        background white
+
+    footer
+        color #ababab
+        font-size 13px
+        padding 17px 50px
+        height 50px
+        max-width 1200px
+        margin auto
+        @media xs
+            text-align center
+            padding 17px 0
+
+        .copyright
+            float left
+            @media xs
+                float inherit
+        .menu-footer
+            float right
+            padding 0
+            margin 0
+            @media xs
+                float inherit
+                margin auto
+                position absolute
+                right 0
+                left 0
+                width 250px
+            > li
+                float left
+                padding 0 10px

@@ -20,9 +20,11 @@
             article
                 .media
                     .image
-                        img(src="/img/media/test.jpg")
+                        a(href="/img/media/test.jpg" data-bind="mediaPopup: {type: 'image'}")
+                            img(src="/img/media/test.jpg")
                     .video
-                        img(src="http://img.youtube.com/vi/CxQsz7tF21s/0.jpg")
+                        a(href="http://www.youtube.com/watch?v=7HKoqNJtMTQ" data-bind="mediaPopup: {type: 'iframe'}")
+                            img(src="http://img.youtube.com/vi/CxQsz7tF21s/0.jpg")
                 h2 Домостроительная система ЭКОКУБ
                 .text
                     p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni blanditiis est neque, asperiores animi modi saepe voluptas commodi temporibus sapiente eos deleniti voluptatem repellat necessitatibus ullam ipsa iure voluptatibus tenetur?

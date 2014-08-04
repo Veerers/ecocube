@@ -10,12 +10,18 @@
             'text': '../libs/requirejs-text/text',
             'transitions': 'transitions',
 
+            'popup': '../libs/magnific-popup/dist/jquery.magnific-popup',
+
             'i18next': ['//cdn.jsdelivr.net/i18next/1.7.1/i18next.amd.withJQuery.min', '../libs/i18next/i18next.amd.withJQuery'],
             'jquery': ['//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min', '../libs/jquery/dist/jquery'],
             'knockout': ['//cdn.jsdelivr.net/knockout/3.1.0/knockout', '../libs/knockout.js/knockout'],
             'lodash': ['//cdn.jsdelivr.net/lodash/2.4.1/lodash.min', '../libs/lodash/dist/lodash'],
             'q': ['//cdnjs.cloudflare.com/ajax/libs/q.js/1.0.1/q.min', '../libs/q/q']
+        },
+        shim: {
+            'popup': ['jquery']
         }
+
     });
     //>>excludeStart("build", true);
     requirejs.config({
@@ -37,6 +43,11 @@
         var $ = require('jquery');
         var q = require('q');
         var i18next = require('i18next');
+
+        // init extensions
+        var bindings = require('bindings');
+        var popup = require('popup');
+
 
         //>>excludeStart("build", true);
         system.debug(true);

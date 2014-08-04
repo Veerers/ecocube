@@ -51,10 +51,10 @@
         system.debug(true);
         //>>excludeEnd("build");
 
-        app.title = 'ЕкоКуб';
+        app.title = 'ЭкоКуб';
 
         //>>excludeStart("build", true);
-        app.title = 'Dev - ЕкоКуб';
+        app.title = 'ЭкоКуб - 3Е';
         //>>excludeEnd("build");
 
         app.configurePlugins({

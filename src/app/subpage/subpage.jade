@@ -10,33 +10,28 @@
                 | +375 17
                 b 511 31 05
             a.mail(href="mailto:3e@ecocube.by") 3e@ecocube.by
-    .subpage-content
+    .subpage-content(data-bind="with: page()")
         nav
             a(href="#") Главная
             | &nbsp;-&nbsp;
-            span О нас
+            span(data-bind="text: title")
         .content
-            h1 О нас
+            h1(data-bind="text: title")
+            // ko foreach: articles
             article
-                .media
-                    .image
-                        a(href="/img/media/test.jpg" data-bind="mediaPopup: {type: 'image'}")
-                            img(src="/img/media/test.jpg")
-                    .video
-                        a(href="http://www.youtube.com/watch?v=7HKoqNJtMTQ" data-bind="mediaPopup: {type: 'iframe'}")
-                            img(src="http://img.youtube.com/vi/CxQsz7tF21s/0.jpg")
-                h2 Домостроительная система ЭКОКУБ
-                .text
-                    p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni blanditiis est neque, asperiores animi modi saepe voluptas commodi temporibus sapiente eos deleniti voluptatem repellat necessitatibus ullam ipsa iure voluptatibus tenetur?
-                    p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni blanditiis est neque, asperiores animi modi saepe voluptas commodi temporibus sapiente eos deleniti voluptatem repellat necessitatibus ullam ipsa iure voluptatibus tenetur?
-            article
-                .media
-                    .image
-                        img(src="/img/media/test.jpg")
-                h2 Домостроительная система ЭКОКУБ
-                .text
-                    p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni blanditiis est neque, asperiores animi modi saepe voluptas commodi temporibus sapiente eos deleniti voluptatem repellat necessitatibus ullam ipsa iure voluptatibus tenetur?
-                    p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni blanditiis est neque, asperiores animi modi saepe voluptas commodi temporibus sapiente eos deleniti voluptatem repellat necessitatibus ullam ipsa iure voluptatibus tenetur?
+                .media(data-bind="foreach: media")
+                    div(data-bind="css: type")
+                        // ko if: type === 'image'
+                        a(href="" data-bind="attr: { href: '/img/media/' + id }, mediaPopup: {type: 'image'}")
+                            img(src="/img/media/test.jpg" data-bind="attr: { src: '/img/media/' + id }")
+                        // /ko
+                        // ko if: type === 'video'
+                        a(href="" data-bind="attr: { href: 'http://www.youtube.com/watch?v=' + id }, mediaPopup: {type: 'iframe'}")
+                            img(src="" data-bind="attr: { src: 'http://img.youtube.com/vi/' + id + '/0.jpg' }, mediaPopup: {type: 'iframe'}")
+                        // /ko
+                h2(data-bind="text: title")
+                .text(data-bind="html: text")
+            // /ko
     .footer-container
         footer
             .copyright © 2014 3E.BY

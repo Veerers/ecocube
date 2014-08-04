@@ -19,37 +19,19 @@
     menu.menu-container
         li
             .menu-label.menu-label-customer Покупателю
-            menu.menu-submenu
+            menu.menu-submenu(data-bind="foreach: siteMap()['Покупателю']")
                 li
-                    a(href="#") Цены
-                li
-                    a(href="#") FAQи
-                li
-                    a(href="#") Где и как купить
+                    a(href="#" data-bind="text: $data, attr: { href: '#/' + $data }")
         li
             .menu-label.menu-label-business Бизнесу
-            menu.menu-submenu
+            menu.menu-submenu(data-bind="foreach: siteMap()['Бизнесу']")
                 li
-                    a(href="#") О Компании
-                li
-                    a(href="#") Инвесторам
-                li
-                    a(href="#") Лицензии, Технологии, Оборудовние
-                li
-                    a(href="#") Дилерам
-                li
-                    a(href="#") Строителям
-                li
-                    a(href="#") Смежникам
+                    a(href="#" data-bind="text: $data, attr: { href: '#/' + $data }")
         li
             .menu-label.menu-label-news Новости
-            menu.menu-submenu
+            menu.menu-submenu(data-bind="foreach: siteMap()['Новости']")
                 li
-                    a(href="#") Наши
-                li
-                    a(href="#") О Нас
-                li
-                    a(href="#") Вокруг Темы
+                    a(href="#" data-bind="text: $data, attr: { href: '#/' + $data }")
     .footer-container
         footer
             .copyright © 2014 3E.BY

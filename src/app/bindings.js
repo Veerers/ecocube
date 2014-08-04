@@ -1,6 +1,9 @@
 /*global define*/
-define(['knockout', 'jquery'], function (ko, $) {
+define(function (require) {
     'use strict';
+    var ko = require('knockout');
+    var $ = require('jquery');
+
     ko.bindingHandlers.mediaPopup = {
         init: function (element, valueAccessor, allBindings, viewModel, bindingContext) {
             var $element = $(element);

@@ -48,7 +48,6 @@
         var bindings = require('bindings');
         var popup = require('popup');
 
-
         //>>excludeStart("build", true);
         system.debug(true);
         //>>excludeEnd("build");
@@ -80,7 +79,7 @@
             fallbackLng: ['ru'],
             useLocalStorage: true,
             localStorageExpirationTime: 10800000, // 3 hours
-            resGetPath: 'api/locales/__lng__',
+            resGetPath: '/locales/__lng__.json',
             lowerCaseLng: true
         };
 

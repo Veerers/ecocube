@@ -5,40 +5,40 @@
         .link-shape.link-shape-1
             .circle
             .line
-            a.text-container(href="#")
-                .text ДС "ЭКОКУБ"
+            a.text-container(href="#/ДС ЭКОКУБ")
+                .text(data-i18n="home.header.ecocube")
         .link-shape.link-shape-2
             .line
-            a.text-container(href="#")
-                .text Элементы ДС "ЭКОКУБ"
+            a.text-container(href="#/Элементы ДС ЭКОКУБ")
+                .text(data-i18n="home.header.elements")
         .link-shape.link-shape-3
             .circle
             .line
-            a.text-container(href="#")
-                .text Как построить ЭКОКУБ
+            a.text-container(href="#/Как построить ЭКОКУБ")
+                .text(data-i18n="home.header.how-to")
     menu.menu-container
         li
-            .menu-label.menu-label-customer Покупателю
+            .menu-label.menu-label-customer(data-i18n="home.menu.customer")
             menu.menu-submenu(data-bind="foreach: siteMap()['Покупателю']")
                 li
                     a(href="#" data-bind="text: $data, attr: { href: '#/' + $data }")
         li
-            .menu-label.menu-label-business Бизнесу
+            .menu-label.menu-label-business(data-i18n="home.menu.business")
             menu.menu-submenu(data-bind="foreach: siteMap()['Бизнесу']")
                 li
                     a(href="#" data-bind="text: $data, attr: { href: '#/' + $data }")
         li
-            .menu-label.menu-label-news Новости
+            .menu-label.menu-label-news(data-i18n="home.menu.news")
             menu.menu-submenu(data-bind="foreach: siteMap()['Новости']")
                 li
                     a(href="#" data-bind="text: $data, attr: { href: '#/' + $data }")
     .footer-container
         footer
-            .copyright © 2014 3E.BY
+            .copyright(data-i18n="footer.copyright")
             menu.menu-footer
                 li
-                    a(href="#") О компании
+                    a(href="#" data-i18n="footer.about-company")
                 li
-                    a(href="#") Вакансии
+                    a(href="#" data-i18n="footer.vacancy")
                 li
-                    a(href="#") Реклама
+                    a(href="#" data-i18n="footer.ads")

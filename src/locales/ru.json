@@ -1,0 +1,23 @@
+{
+    "home": {
+        "header": {
+            "ecocube": "ДС \"ЭКОКУБ\"",
+            "elements": "Элементы ДС \"ЭКОКУБ\"",
+            "how-to": "Как построить ЭКОКУБ"
+        },
+        "menu": {
+            "customer": "Покупателю",
+            "business": "Бизнесу",
+            "news": "Новости"
+        }
+    },
+    "footer": {
+        "copyright": "© 2014 3E.BY",
+        "about-company": "О компании",
+        "vacancy": "Вакансии",
+        "ads": "Реклама"
+    },
+    "subpage": {
+        "main-page": "Главная"
+    }
+}

@@ -12,7 +12,7 @@
             a.mail(href="mailto:3e@ecocube.by") 3e@ecocube.by
     .subpage-content(data-bind="with: page()")
         nav
-            a(href="#") Главная
+            a(href="#" data-i18n="subpage.main-page")
             | &nbsp;-&nbsp;
             span(data-bind="text: title")
         .content
@@ -34,8 +34,8 @@
             // /ko
     .footer-container
         footer
-            .copyright © 2014 3E.BY
+            .copyright(data-i18n="footer.copyright")
             menu.menu-footer
                 li
-                    a(href="#") Главная
+                    a(href="#" data-i18n="subpage.main-page")
     a.go-up-btn(href="#" data-bind="goUp: true") ^

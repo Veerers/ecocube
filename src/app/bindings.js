@@ -1,3 +1,4 @@
+/*jslint browser:true,unparam:true,vars:true*/
 /*global define*/
 define(function (require) {
     'use strict';
@@ -23,7 +24,7 @@ define(function (require) {
             });
             $element.fadeOut(0);
             $global.scroll(function (e) {
-                var scroll = $global.scrollTop()
+                var scroll = $global.scrollTop();
                 if (scroll < start) {
                     $element.fadeOut(0);
                 } else if (scroll >= start && scroll < stop) {
@@ -31,9 +32,9 @@ define(function (require) {
                 } else if (scroll >= stop) {
                     $element.fadeTo(0, 1);
                 }
-            })
+            });
         }
-    }
+    };
     return {
 
     };

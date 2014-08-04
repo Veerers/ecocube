@@ -45,8 +45,8 @@
         var i18next = require('i18next');
 
         // init extensions
-        var bindings = require('bindings');
-        var popup = require('popup');
+        require('bindings');
+        require('popup');
 
         //>>excludeStart("build", true);
         system.debug(true);
@@ -79,7 +79,7 @@
             fallbackLng: ['ru'],
             useLocalStorage: true,
             localStorageExpirationTime: 10800000, // 3 hours
-            resGetPath: '/locales/__lng__.json',
+            resGetPath: 'api/translations/__lng__',
             lowerCaseLng: true
         };
 

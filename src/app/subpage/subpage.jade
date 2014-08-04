@@ -22,8 +22,8 @@
                 .media(data-bind="foreach: media")
                     div(data-bind="css: type")
                         // ko if: type === 'image'
-                        a(href="" data-bind="attr: { href: '/img/media/' + id }, mediaPopup: {type: 'image'}")
-                            img(src="/img/media/test.jpg" data-bind="attr: { src: '/img/media/' + id }")
+                        a(href="" data-bind="attr: { href: id }, mediaPopup: {type: 'image'}")
+                            img(src="" data-bind="attr: { src: id }")
                         // /ko
                         // ko if: type === 'video'
                         a(href="" data-bind="attr: { href: 'http://www.youtube.com/watch?v=' + id }, mediaPopup: {type: 'iframe'}")

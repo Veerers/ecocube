@@ -8,7 +8,6 @@
             'durandal': '../libs/durandal/js',
             'plugins': '../libs/durandal/js/plugins',
             'text': '../libs/requirejs-text/text',
-            'transitions': 'transitions',
 
             'popup': '../libs/magnific-popup/dist/jquery.magnific-popup',
 

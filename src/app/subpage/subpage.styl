@@ -27,6 +27,11 @@
 
     header
         height 260px
+        @media xs
+            position relative
+            right 97px
+        @media sm
+            height 170px
         .logo
             background-image url(/img/logo_eco.png)
             position absolute
@@ -34,16 +39,22 @@
             left 111px
             width 296px
             height 135px
+            @media lg
+                left 206px
+
         .contacts
             position absolute
             top 130px
-            left 150px
+            left 200px
             right 0
             margin auto
             width 170px
             font-size 14px
             color #8c6239
             font-weight bold
+            @media sm
+                top 20px
+                left 480px
 
             a
                 display block
@@ -69,6 +80,11 @@
     .subpage-content
         background-color #fff
         margin 10px
+        @media sm
+            width 700px
+            margin auto
+        @media md
+            width 960px
         nav
             font-size 14px
             height 40px
@@ -85,11 +101,22 @@
                 font-size 30px
                 font-weight normal
             article
+                position relative
                 margin-bottom 60px
+                clearfix()
             h2
                 font-size 18px
                 color #8c6239
+                @media sm
+                    float right
+                    width 366px
+                @media md
+                    width 626px
             .media
+                @media sm
+                    float left
+                    width 244px
+                    margin-right 30px
                 .image
                     position relative
                     &:after
@@ -151,6 +178,11 @@
                 font-size 14px
                 color #6e6e6e
                 line-height 1.4
+                @media sm
+                    float right
+                    width 366px
+                @media md
+                    width 626px
     .footer-container
         background white
     footer
@@ -188,8 +220,8 @@
         width 50px
         background-color #d3a907
         color white
-        font-size 50px
-        padding 6px
+        font-size 40px
+        padding 10px
         text-align center
         position fixed
         bottom 50px
@@ -198,3 +230,4 @@
         transition opacity .2s
         &:hover
             opacity 1
+            text-decoration none

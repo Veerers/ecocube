@@ -1,23 +1,38 @@
 .subpage
     header
-        .logo
+        a(href="#")
+            .logo
         .contacts
-            a.phone(href="#")
+            a.phone(href="tel:+375296659311")
                 | +375 29
-                span 665 93 11
-            a.phone(href="#")
+                b 665 93 11
+            a.phone(href="tel:+375175113105")
                 | +375 17
-                span 511 31 05
-            a.mail(herf="#") 3e@ecocube.by
+                b 511 31 05
+            a.mail(href="mailto:3e@ecocube.by") 3e@ecocube.by
     .subpage-content
         nav
             a(href="#") Главная
-            a(href="#") О нас
-        div
+            | &nbsp;-&nbsp;
+            span О нас
+        .content
             h1 О нас
-            div
+            article
                 .media
-                    img(src="/img/logo_3e.png")
+                    .image
+                        img(src="/img/media/test.jpg")
+                    .video
+                        img(src="http://img.youtube.com/vi/CxQsz7tF21s/0.jpg")
+                h2 Домостроительная система ЭКОКУБ
+                .text
+                    p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni blanditiis est neque, asperiores animi modi saepe voluptas commodi temporibus sapiente eos deleniti voluptatem repellat necessitatibus ullam ipsa iure voluptatibus tenetur?
+                    p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni blanditiis est neque, asperiores animi modi saepe voluptas commodi temporibus sapiente eos deleniti voluptatem repellat necessitatibus ullam ipsa iure voluptatibus tenetur?
+            article
+                .media
+                    .image
+                        img(src="/img/media/test.jpg")
+                    .video
+                        img(src="http://img.youtube.com/vi/CxQsz7tF21s/0.jpg")
                 h2 Домостроительная система ЭКОКУБ
                 .text
                     p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni blanditiis est neque, asperiores animi modi saepe voluptas commodi temporibus sapiente eos deleniti voluptatem repellat necessitatibus ullam ipsa iure voluptatibus tenetur?
@@ -27,4 +42,4 @@
             menu.menu-footer
                 li
                     a(href="#") Главная
-    .go-up-btn
+    a.go-up-btn(href="#") ^

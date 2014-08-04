@@ -1,0 +1,200 @@
+.subpage
+    background url(/img/bg.png)
+    background-position 0 20px
+    background-color #fff6d4
+    position relative
+    z-index 0
+    &:before
+        content ''
+        background linear-gradient(to top, #fff6d4, alpha(#fff6d4, 0))
+        position absolute
+        display block
+        top 0
+        height 600px
+        left 0
+        right 0
+        z-index -1
+    &:after
+        content ''
+        background linear-gradient(to bottom, #fff6d4, #f2f2f2)
+        position absolute
+        display block
+        top 600px
+        bottom 0
+        left 0
+        right 0
+        z-index -1
+
+    header
+        height 260px
+        .logo
+            background-image url(/img/logo_eco.png)
+            position absolute
+            top 18px
+            left 111px
+            width 296px
+            height 135px
+        .contacts
+            position absolute
+            top 130px
+            left 150px
+            right 0
+            margin auto
+            width 170px
+            font-size 14px
+            color #8c6239
+            font-weight bold
+
+            a
+                display block
+                position relative
+                height 45px
+                //padding-top 20px
+                &:before
+                    content ''
+                    display block
+                    position absolute
+                    width 50px
+                    height 50px
+                    background-image url(/img/icons_subpage.png)
+                    left -50px
+                    top -12px
+                b
+                    font-size 24px
+                    color #d3a907
+                    padding-left 8px
+            .phone
+                &:before
+                    background-position -50px
+    .subpage-content
+        background-color #fff
+        margin 10px
+        nav
+            font-size 14px
+            height 40px
+            background-color #d3a907
+            padding 12px 25px
+            color #fff
+            a
+                text-decoration underline
+        .content
+            padding 10px 30px
+            h1
+                color #d2ba53
+                text-transform uppercase
+                font-size 30px
+                font-weight normal
+            article
+                margin-bottom 60px
+            h2
+                font-size 18px
+                color #8c6239
+            .media
+                .image
+                    position relative
+                    &:after
+                        content ''
+                        display block
+                        position absolute
+                        width 50px
+                        height 50px
+                        background-image url(/img/icons_subpage.png)
+                        background-position 50px
+                        top 0
+                        bottom 0
+                        right 0
+                        left 0
+                        margin auto
+                        opacity .7
+                        transition opacity .2s
+                    &:hover
+                        cursor pointer
+                        &:after
+                            opacity 1
+                    img
+                        max-height 100%
+                        max-width 100%
+                .video
+                    position relative
+                    &:after
+                        content '▶'
+                        font-size 22px
+                        display block
+                        position absolute
+                        width 50px
+                        height 50px
+                        color white
+                        border 5px solid
+                        border-radius 100%
+                        padding 6px 14px
+                        top 0
+                        bottom 0
+                        right 0
+                        left 0
+                        margin auto
+                        opacity .7
+                        transition opacity .2s
+                    &:hover
+                        cursor pointer
+                        &:after
+                            opacity 1
+                    img
+                        max-height 100%
+                        max-width 100%
+                > *
+                    margin 5px
+                    overflow hidden
+                    width 100%
+                    max-height 190px
+                    text-align center
+            .text
+                font-size 14px
+                color #6e6e6e
+                line-height 1.4
+    .footer-container
+        background white
+    footer
+        color #ababab
+        font-size 13px
+        padding 17px 50px
+        height 50px
+        max-width 1200px
+        margin auto
+        @media xs
+            text-align center
+            padding 17px 0
+
+        .copyright
+            float left
+            @media xs
+                float inherit
+        .menu-footer
+            float right
+            list-style none
+            padding 0
+            margin 0
+            @media xs
+                float inherit
+                margin auto
+                position absolute
+                right 0
+                left 0
+                width 250px
+            > li
+                float left
+                padding 0 10px
+    .go-up-btn
+        height 50px
+        width 50px
+        background-color #d3a907
+        color white
+        font-size 50px
+        padding 6px
+        text-align center
+        position fixed
+        bottom 50px
+        right 11px
+        opacity .6
+        transition opacity .2s
+        &:hover
+            opacity 1

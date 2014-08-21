@@ -7,10 +7,41 @@
 .splash
     background-image url(/img/logo_eco.png)
     background-repeat no-repeat
-    background-position top
+    background-position center
     position absolute
     top 0
     bottom 0
     left 0
     right 0
-    animation fading .5s infinite alternate
+    animation fading 1.5s infinite alternate
+    margin auto
+    text-align center
+    white-space nowrap
+
+@keyframes move
+    0%
+        left 0%
+    100%
+        left 100%
+
+.loader-circles
+    list-style none
+    width 90%
+    margin 10px auto
+    position relative
+    delay-xlg = 3s
+
+    li
+        width 8px
+        height 8px
+        background-color #d3a907
+        position absolute
+        border-radius 50%
+        animation move delay-xlg infinite cubic-bezier(.2,.64,.81,.23)
+
+        &:nth-child(2)
+            animation-delay (delay-xlg / 20)
+        &:nth-child(3)
+            animation-delay (delay-xlg / 20 * 2)
+        &:nth-child(4)
+            animation-delay (delay-xlg / 20 * 3)

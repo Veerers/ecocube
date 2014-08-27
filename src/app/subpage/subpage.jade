@@ -20,15 +20,16 @@
             // ko foreach: articles
             article
                 .media(data-bind="foreach: media")
-                    div(data-bind="css: type")
-                        // ko if: type === 'image'
-                        a(href="" data-bind="attr: { href: id }, mediaPopup: {type: 'image'}")
+                    // ko if: type === 'image'
+                    a(href="" data-bind="attr: { href: id }, mediaPopup: {type: 'image'}")
+                        div(data-bind="css: type")
                             img(src="" data-bind="attr: { src: id }")
-                        // /ko
-                        // ko if: type === 'video'
-                        a(href="" data-bind="attr: { href: 'http://www.youtube.com/watch?v=' + id }, mediaPopup: {type: 'iframe'}")
+                    // /ko
+                    // ko if: type === 'video'
+                    a(href="" data-bind="attr: { href: 'http://www.youtube.com/watch?v=' + id }, mediaPopup: {type: 'iframe'}")
+                        div(data-bind="css: type")
                             img(src="" data-bind="attr: { src: 'http://img.youtube.com/vi/' + id + '/0.jpg' }, mediaPopup: {type: 'iframe'}")
-                        // /ko
+                    // /ko
                 h2(data-bind="text: title")
                 .text(data-bind="html: text")
             // /ko

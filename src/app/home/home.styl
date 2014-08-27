@@ -10,8 +10,15 @@
             height 440px
         @media sm
             background-size 1600px
-            height 1000px
-
+            height 930px
+        @media md
+            background-size 1010px
+            background-position-y -70px
+            height 550px
+        @media lg
+            background-position-y 0
+            background-size 1600px
+            height 930px
     .logo-3e
         position absolute
         top 37px
@@ -28,7 +35,13 @@
             top 61px
             right 460px
         @media md
-            right 540px
+            right 418px
+            width 130px
+            top 30px
+        @media lg
+            width 195px
+            top 61px
+            right 640px
 
     .logo-eco
         position absolute
@@ -45,8 +58,13 @@
             top 50px
             left 393px
         @media md
-            left 586px
-
+            left 550px
+            top 24px
+            width 180px
+        @media lg
+            width 296px
+            top 50px
+            left 777px
     .link-shape
         item-color = #d3a907
         border-width = 3px
@@ -73,25 +91,43 @@
             @media sm
                 top 510px
                 left 630px
+            @media md
+                top 250px
+                left 400px
+            @media lg
+                top 510px
+                left 630px
             .circle
                 top -9px
                 left -10px
             .line
                 width 110px
-                @media sm
-                    width 60px
                 transform rotate(-150deg)
                 top -15px
                 left -4px
-            .text-container
-                top -90px
-                right 110px
                 @media sm
+                    width 60px
+                @media md
+                    width 35px
+                    transform rotate(-43deg)
+                    top -10px
+                    left 6px
+            .text-container
+                transform skew(block-skew)
+                @media md-max
                     top -64px
                     right 67px
-                transform skew(block-skew)
+                @media sm-max
+                    right 110px
+                    top -90px
+                @media md
+                    top -61px
+                    left 36px
+                    transform skew(-(block-skew))
             .text
                 transform skew(-(block-skew))
+                @media md
+                    transform skew(block-skew)
 
         &.link-shape-2
             top 437px
@@ -104,6 +140,12 @@
             @media sm
                 top 639px
                 left 270px
+            @media md
+                top 496px
+                left 326px
+            @media lg
+                top 826px
+                left 507px
             .line
                 width 15px
                 transform rotate(58deg)
@@ -111,10 +153,16 @@
                 left -26px
                 @media xs
                     display none
+                @media md
+                    width 80px
             .text-container
                 top -149px
-                right 30px
                 transform skew(-(block-skew))
+                @media md-max
+                    right 30px
+                @media md
+                    left 15px
+                    top -52px
             .text
                 transform skew(block-skew)
 
@@ -130,6 +178,12 @@
             @media sm
                 top 690px
                 left -660px
+            @media md
+                top 410px
+                left -400px
+            @media lg
+                top 760px
+                left -610px
             .circle
                 @media xs
                     top -65px
@@ -143,11 +197,19 @@
                     width 30px
                     top -67px
                     right -65px
+                @media md
+                    transform rotate(-122deg)
+                    top -16px
+                    right -92px
             .text-container
                 text-align right
                 top -120px
-                left 30px
                 transform skew(-(block-skew))
+                @media md-max
+                    left 30px
+                @media md
+                    right 61px
+                    top -117px
             .text
                 transform skew(block-skew)
 
@@ -195,14 +257,15 @@
     .menu-container
         margin auto
         width 330px
-        padding-left 50px
+        padding-left 70px
+        @media md-max
+            width 740px
+            padding-top 60px
         @media xs
             padding-left 70px
             width 300px
         @media sm
-            @media md-max
-                width 740px
-                padding-top 60px
+            padding-left 50px
         @media md
             width 970px
             padding-left 70px
@@ -219,10 +282,9 @@
         color #8c6239
         @media xs
             width 230px
-        @media sm
-            @media md-max
-                width 230px
-                padding-left 40px
+        @media md-max
+            width 230px
+            padding-left 40px
         @media md
             width 300px
 
@@ -241,8 +303,10 @@
         text-transform uppercase
         position relative
         @media sm
-            @media md-max
-                text-align center
+            font-size 23px
+            text-align center
+        @media md
+            text-align left
         &:before
             content ''
             position absolute
@@ -253,11 +317,14 @@
             height 44px
             background-image url(/img/icons.png)
             @media sm
-                @media md-max
-                    top -50px
-                    left 0
-                    right 0
-                    margin auto
+                top -50px
+                left 0
+                right 0
+                margin auto
+            @media md
+                top -5px
+                left -60px
+                right inherit
 
         &-business
             &:before

@@ -1,13 +1,10 @@
 {
   "name": "ecocube",
   "private": true,
-  "resolutions": {
-    "jquery": "~2.1.1"
-  },
   "dependencies": {
     "durandal": "2.1",
     "i18next": "1.7",
-    "jquery": "2",
+    "jquery": "1",
     "knockout.js": "3.1",
     "lodash": "2",
     "normalize.css": "*",

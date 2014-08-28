@@ -11,28 +11,16 @@
 
             'popup': '../libs/magnific-popup/dist/jquery.magnific-popup',
 
-            'i18next': ['//cdn.jsdelivr.net/i18next/1.7.1/i18next.amd.withJQuery.min', '../libs/i18next/i18next.amd.withJQuery'],
-            'jquery': ['//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min', '../libs/jquery/dist/jquery'],
-            'knockout': ['//cdn.jsdelivr.net/knockout/3.1.0/knockout', '../libs/knockout.js/knockout'],
-            'lodash': ['//cdn.jsdelivr.net/lodash/2.4.1/lodash.min', '../libs/lodash/dist/lodash'],
-            'q': ['//cdnjs.cloudflare.com/ajax/libs/q.js/1.0.1/q.min', '../libs/q/q']
+            'i18next': '../libs/i18next/i18next.amd.withJQuery',
+            'jquery': '../libs/jquery/jquery',
+            'knockout': '../libs/knockout.js/knockout',
+            'lodash': '../libs/lodash/dist/lodash.compat',
+            'q': '../libs/q/q'
         },
         shim: {
             'popup': ['jquery']
         }
-
     });
-    //>>excludeStart("build", true);
-    requirejs.config({
-        paths: {
-            'i18next': '../libs/i18next/i18next.amd.withJQuery',
-            'jquery': '../libs/jquery/dist/jquery',
-            'knockout': '../libs/knockout.js/knockout',
-            'lodash': '../libs/lodash/dist/lodash',
-            'q': '../libs/q/q'
-        }
-    });
-    //>>excludeEnd("build");
 
     define(function (require) {
         var system = require('durandal/system');
@@ -44,8 +32,8 @@
         var i18next = require('i18next');
 
         // init extensions
-        require('bindings');
         require('popup');
+        require('bindings');
 
         //>>excludeStart("build", true);
         system.debug(true);
@@ -73,13 +61,10 @@
 
         var i18NOptions = {
             lng: 'ru',
-            useCookie: true,
-            preload: ['ru'],
-            fallbackLng: ['ru'],
+            fallbackLng: 'ru',
             useLocalStorage: true,
             localStorageExpirationTime: 10800000, // 3 hours
-            resGetPath: 'api/translations/__lng__',
-            lowerCaseLng: true
+            resGetPath: 'api/translations/ru',
         };
 
         //>>excludeStart("build", true);

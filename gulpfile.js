@@ -114,18 +114,10 @@ gulp.task('prod:durandal', ['dev', 'prod:jade'], function () {
         rjsConfigAdapter: function (config) {
             config.include = _.filter(config.include, function (dep) {
                 if (dep.indexOf('plugins/') !== -1) {
-                    return dep === 'plugins/router' || dep === 'plugins/history';
+                    return dep === 'plugins/router';
                 }
                 return true;
             });
-            console.log(config.include);
-            config.paths = {
-                'i18next': 'empty:',
-                'jquery': 'empty:',
-                'knockout': 'empty:',
-                'lodash': 'empty:',
-                'q': 'empty:'
-            };
             return config;
         }
     };

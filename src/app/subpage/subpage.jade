@@ -19,6 +19,7 @@
             h1(data-bind="text: title")
             // ko foreach: articles
             article
+                // ko if: ('media' in $data) && media
                 .media(data-bind="foreach: media")
                     // ko if: type === 'image'
                     a(href="" data-bind="attr: { href: id }, mediaPopup: {type: 'image'}")
@@ -30,8 +31,13 @@
                         div(data-bind="css: type")
                             img(src="" data-bind="attr: { src: 'http://img.youtube.com/vi/' + id + '/0.jpg' }, mediaPopup: {type: 'iframe'}")
                     // /ko
+                // /ko
+                // ko if: ('title' in $data) && title
                 h2(data-bind="text: title")
+                // /ko
+                // ko if: ('text' in $data) && text
                 .text(data-bind="html: text")
+                // /ko
             // /ko
     .footer-container
         footer

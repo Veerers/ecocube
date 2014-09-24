@@ -15,10 +15,27 @@
             background-size 1010px
             background-position-y -70px
             height 550px
-        @media lg
-            background-position-y 0
-            background-size 1600px
-            height 930px
+        @media (min-width: 1280px)
+            zoom 1.3
+        @media (min-width: 1650px)
+            zoom 1.5
+        //@media lg
+            // background-repeat no-repeat
+            // &:before
+            //     content ''
+            //     display block
+            //     position absolute
+            //     width 1000px
+            //     height 400px
+            //     //background-color #fff6d4
+            //     background linear-gradient(to bottom, #fff6d4, #f2f2f2), url(/img/bg.png), linear-gradient(to top, #fff6d4, alpha(#fff6d4, 0))
+            //     //right 90%
+            //     left -1000px
+            //     margin auto
+                //left 100%
+            // background-position-y 0
+            // background-size 1600px
+            // height 930px
     .logo-3e
         position absolute
         top 37px
@@ -26,6 +43,9 @@
         right 260px
         margin auto
         width 130px
+        transition opacity .2s
+        &:hover
+            opacity .7
         @media xs
             top 25px
             right 150px
@@ -38,10 +58,10 @@
             right 418px
             width 130px
             top 30px
-        @media lg
-            width 195px
-            top 61px
-            right 640px
+        // @media lg
+        //     width 195px
+        //     top 61px
+        //     right 640px
 
     .logo-eco
         position absolute
@@ -50,6 +70,9 @@
         right 0
         margin auto
         width 200px
+        transition opacity .2s
+        &:hover
+            opacity .7
         @media xs
             left 90px
             top 20px
@@ -61,10 +84,10 @@
             left 550px
             top 24px
             width 180px
-        @media lg
-            width 296px
-            top 50px
-            left 777px
+        // @media lg
+        //     width 296px
+        //     top 50px
+        //     left 777px
     .link-shape
         item-color = #d3a907
         border-width = 3px
@@ -94,9 +117,9 @@
             @media md
                 top 250px
                 left 400px
-            @media lg
-                top 510px
-                left 630px
+            // @media lg
+            //     top 510px
+            //     left 630px
             .circle
                 top -9px
                 left -10px
@@ -143,9 +166,9 @@
             @media md
                 top 496px
                 left 326px
-            @media lg
-                top 826px
-                left 507px
+            // @media lg
+            //     top 826px
+            //     left 507px
             .line
                 width 15px
                 transform rotate(58deg)
@@ -181,9 +204,9 @@
             @media md
                 top 410px
                 left -400px
-            @media lg
-                top 760px
-                left -610px
+            // @media lg
+            //     top 760px
+            //     left -610px
             .circle
                 @media xs
                     top -65px
@@ -364,3 +387,9 @@
             > li
                 float left
                 padding 0 10px
+            img
+                max-height 42px
+                padding 10px
+                //transition opacity .1s
+                &:hover
+                    opacity .8

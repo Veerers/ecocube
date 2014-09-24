@@ -24,6 +24,13 @@
                 // /ko
                 // ko if: ('media' in $data) && media
                 .media(data-bind="foreach: media")
+                    // ko if: type === 'file'
+                    a(href="" target="_blank" data-bind="attr: { href: id }")
+                        div(data-bind="css: type")
+                            span(data-bind="text: name")
+                            .btn-download-container
+                                .btn-download Скачать
+                    // /ko
                     // ko if: type === 'image'
                     a(href="" data-bind="attr: { href: id }, mediaPopup: {type: 'image'}")
                         div(data-bind="css: type")

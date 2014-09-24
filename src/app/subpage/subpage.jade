@@ -41,6 +41,13 @@
                         div(data-bind="css: type")
                             img(src="" data-bind="attr: { src: 'http://img.youtube.com/vi/' + id + '/0.jpg' }, mediaPopup: {type: 'iframe'}")
                     // /ko
+                    // ko if: type === 'gallery'
+                    div(data-bind="css: type + '-container', mediaPopup: {type: 'image', delegate: 'a', gallery: {enabled: true}}")
+                        div(data-bind="foreach: id.split('\\n')")
+                            a(href="" data-bind="attr: { href: $data }")
+                                div(data-bind="css: $parent.type")
+                                    img(src="" data-bind="attr: { src: $data }")
+                    // /ko
                 // /ko
                 // ko if: ('text' in $data) && text
                 .text(data-bind="html: text")

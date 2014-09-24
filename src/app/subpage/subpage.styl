@@ -141,8 +141,13 @@
                     &:hover
                         .btn-download-container
                             background-color darken(#d3a907, 10%)
-
-                .image
+                .gallery-container
+                    margin 0
+                    a
+                        display none
+                    a:first-child
+                        display inherit
+                .image, .gallery
                     position relative
                     &:after
                         content ''

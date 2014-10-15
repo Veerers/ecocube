@@ -147,6 +147,25 @@
                         display none
                     a:first-child
                         display inherit
+                .gallery
+                    &:before
+                        content '< >'
+                        display block
+                        position absolute
+                        width 250px
+                        height 50px
+                        top 0
+                        bottom 0
+                        right 0
+                        @media sm
+                            left 15px
+                        left 35px
+                        margin auto
+                        font-size 50px
+                        color #fff
+                        letter-spacing 40px
+                        opacity 0
+                        transition opacity .2s
                 .image, .gallery
                     position relative
                     &:after
@@ -166,7 +185,7 @@
                         transition opacity .2s
                     &:hover
                         cursor pointer
-                        &:after
+                        &:after, &:before
                             opacity 1
                     img
                         max-height 100%

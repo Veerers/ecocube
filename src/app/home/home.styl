@@ -94,8 +94,8 @@
         border-prop = border-width solid white
         line-deg = 45deg
         line-length = 95px
-        line-width = 9px
-        circle-size = 18px
+        line-width = 0
+        circle-size = 12px
         block-skew = 20deg
 
         position absolute
@@ -126,15 +126,15 @@
             .line
                 width 110px
                 transform rotate(-150deg)
-                top -15px
+                top -20px
                 left -4px
                 @media sm
                     width 60px
                 @media md
-                    width 35px
+                    width 41px
                     transform rotate(-43deg)
-                    top -10px
-                    left 6px
+                    top -11px
+                    left 4px
             .text-container
                 transform skew(block-skew)
                 @media md-max
@@ -170,14 +170,15 @@
             //     top 826px
             //     left 507px
             .line
-                width 15px
+                width 16px
                 transform rotate(58deg)
-                top -123px
-                left -26px
+                top -126px
+                left -28px
                 @media xs
                     display none
                 @media md
-                    width 80px
+                    top -121px
+                    width 77px
             .text-container
                 top -149px
                 transform skew(-(block-skew))
@@ -214,25 +215,29 @@
             .line
                 width 93px
                 transform rotate(-62deg)
-                top -12px
+                top -11px
                 right -99px
+                display none
                 @media xs
+                    display inherit
                     width 30px
                     top -67px
                     right -65px
+                @media sm
+                    display inherit
                 @media md
                     transform rotate(-122deg)
                     top -16px
-                    right -92px
+                    right -95px
             .text-container
                 text-align right
-                top -120px
+                top -115px
                 transform skew(-(block-skew))
                 @media md-max
-                    left 30px
+                    left 31px
                 @media md
-                    right 61px
-                    top -117px
+                    right 60px
+                    top -109px
             .text
                 transform skew(block-skew)
 
@@ -260,9 +265,9 @@
         .text-container
             background item-color
             color white
-            padding 5px 10px
+            padding 3px 10px
             transform-origin: 0 0
-            font-size 18px
+            font-size 16px
 
             border-radius 3px
             border border-prop
